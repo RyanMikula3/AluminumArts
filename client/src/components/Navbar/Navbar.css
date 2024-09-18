@@ -1,0 +1,72 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px 0; /* Reduced padding to make it more compact */
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    z-index: 100;
+    background-color: transparent; /* Transparent initially */
+    backdrop-filter: blur(0); /* No frosted effect initially */
+}
+
+.scroll-nav {
+    background-color: rgba(255, 255, 255, 0.95); /* Opaque on scroll */
+    padding: 6px 0; /* Even smaller padding on scroll */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow on scroll */
+    backdrop-filter: blur(10px); /* Frosted glass effect when scrolled */
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 100px; /* Smaller logo size */
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Smaller gap between links */
+}
+
+.nav-links a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: #f58220;
+    border-bottom: 2px solid #f58220;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar-logo img {
+        width: 80px; /* Even smaller logo for mobile */
+    }
+}

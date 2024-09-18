@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+.gallery-section {
+    padding: 100px 20px;
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem; /* Increased font size for elegance */
+    color: #444; /* Darker shade for better readability */
+    margin-bottom: 40px;
+    line-height: 1.5; /* Improved line height for better readability */
+}
+
+/* Grid Layout for the Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Adjust gap for spacing */
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animate transform and shadow */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1); /* Slightly scale the image */
+}
+
+/* Specific layouts */
+.grid-large {
+    grid-column: span 2; /* Span two columns for larger images */
+    grid-row: span 1; /* Adjust row span as needed */
+}
+
+.grid-small {
+    grid-column: span 1; /* Regular single column */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+
+    .gallery-item {
+        border-radius: 10px; /* Slightly less rounding for smaller screens */
+    }
+}

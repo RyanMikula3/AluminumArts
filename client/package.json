@@ -2,7 +2,7 @@
   "name": "aluminumarts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ryanmikula3.github.io/aluminumarts",
+  "homepage": "https://ryanmikula3.github.io/AluminumArts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
